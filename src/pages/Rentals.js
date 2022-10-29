@@ -21,7 +21,7 @@ const Rentals = () => {
           "https://ipfs.moralis.io:2053/ipfs/QmS3gdXVcjM72JSGH82ZEvu4D7nS6sYhbi5YyCw8u8z4pE/media/3",
         lat: "12.918579101082631",
         long: "77.6648929870944",
-        name: "Apartment in Mantri Flora, Bangalore",
+        name: "Apartment in Mantri Flora, Bengaluru",
         pricePerDay: "3",
       },
     },
