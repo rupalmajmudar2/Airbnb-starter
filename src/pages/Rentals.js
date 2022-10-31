@@ -6,12 +6,16 @@ import logo from "../images/airbnbRed.png";
 import { ConnectButton, Icon, Button, useNotification } from "web3uikit";
 import RentalsMap from "../components/RentalsMap";
 import { useState, useEffect } from "react";
+import { useMoralis, useWeb3ExecuteFunction } from "react-moralis";
+import Moralis from 'moralis';
 
 const Rentals = () => {
   const { state: searchFilters } = useLocation();
   const [highLight, setHighLight] = useState();
- //const [coOrdinates, setCoOrdinates] = useState([]);
-  const rentalsList = [
+  const {Moralis} = useMoralis();
+  const [rentalsList, setRentalsList] = useState();
+  const [co0rdinates, setCo0rdinates] = useState([]);
+  /*const rentalsList = [
     {
       attributes: {
         city: "Bangalore",
@@ -25,13 +29,27 @@ const Rentals = () => {
         pricePerDay: "3",
       },
     },
-  ];
+  ];*/
 
-  let coords = [];
-  rentalsList.forEach((e) => {
-      coords.push({lat: e.attributes.lat, lng: e.attributes.lng})
-  });
-  //setCoOrdinates(coords);
+  useEffect(() => {
+    async function fetchRentalsList() {
+      const Rentals = Moralis.Object.extend("RM_Rentals");
+      const query = new Moralis.Query(Rentals);
+      query.equalTo("city", searchFilters.destination);
+      query.greaterThanOrEqualTo("maxGuests_decimal", searchFilters.guests);
+
+      const result = await query.find();
+
+      let coords = [];
+      result.forEach((e) => {
+          coords.push({lat: e.attributes.lat, lng: e.attributes.lng})
+      });
+      setCo0rdinates(coords);
+
+      setRentalsList(result);
+    }
+    fetchRentalsList()
+  }, [searchFilters])
 
   return (
     <>
@@ -109,7 +127,7 @@ const Rentals = () => {
             })}
         </div>
         <div className="rentalsContentR">
-          <RentalsMap locations={coords} setHighLight={setHighLight} />
+          <RentalsMap locations={co0rdinates} setHighLight={setHighLight} />
         </div>
       </div>
     </>
