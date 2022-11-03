@@ -7,7 +7,7 @@ import { ConnectButton, Icon, Button, useNotification } from "web3uikit";
 import RentalsMap from "../components/RentalsMap";
 import { useState, useEffect } from "react";
 import { useMoralis, useWeb3ExecuteFunction } from "react-moralis";
-import Moralis from 'moralis';
+//import Moralis from 'moralis';
 
 const Rentals = () => {
   const { state: searchFilters } = useLocation();
@@ -39,18 +39,23 @@ const Rentals = () => {
       query.greaterThanOrEqualTo("maxGuests_decimal", searchFilters.guests);
 
       const result = await query.find();
-
+      
       let coords = [];
       result.forEach((e) => {
-          coords.push({lat: e.attributes.lat, lng: e.attributes.lng})
+          //coords.push({lat: e.attributes.lat, lng: e.attributes.lng})
+          coords.push({lat: "12.918579101082631", lng: "77.6648929870944"})
       });
       setCo0rdinates(coords);
 
       setRentalsList(result);
     }
-    fetchRentalsList()
+    fetchRentalsList();
   }, [searchFilters])
 
+  const bookRental = async function (start, end, id, dayPrice) {
+
+  }
+  
   return (
     <>
         <div className="topBanner">
