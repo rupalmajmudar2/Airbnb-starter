@@ -133,6 +133,97 @@ const Rentals = () => {
       );
     }
   
+    const addProperty = async function(propName, city, lat, lon, desc1, desc2, imgUrl, maxGuests, price) {
+      let options = {
+        contractAddress: "0xF5983EFF722084dB7C00cA07EA7Dc66F49e44a87",
+        functionName: "addRentals",
+        abi: [
+              {
+                "inputs": [
+                  {
+                    "internalType": "string",
+                    "name": "name",
+                    "type": "string"
+                  },
+                  {
+                    "internalType": "string",
+                    "name": "city",
+                    "type": "string"
+                  },
+                  {
+                    "internalType": "string",
+                    "name": "lat",
+                    "type": "string"
+                  },
+                  {
+                    "internalType": "string",
+                    "name": "long",
+                    "type": "string"
+                  },
+                  {
+                    "internalType": "string",
+                    "name": "unoDescription",
+                    "type": "string"
+                  },
+                  {
+                    "internalType": "string",
+                    "name": "dosDescription",
+                    "type": "string"
+                  },
+                  {
+                    "internalType": "string",
+                    "name": "imgUrl",
+                    "type": "string"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "maxGuests",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "pricePerDay",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "string[]",
+                    "name": "datesBooked",
+                    "type": "string[]"
+                  }
+                ],
+                "name": "addRentals",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+              }
+            ],
+            params: {
+              name: propName,
+              city: city,
+              lat: lat,
+              long: lon,
+              unoDescription: desc1,
+              dosDescription: desc2,
+              imgUrl: imgUrl,
+              maxGuests: maxGuests,
+              pricePerDay: price,
+              datesBooked: []
+            },
+          }
+    
+          console.log("Params are: " + JSON.stringify(options));
+          await contractProcessor.fetch({
+            params: options,
+            onSuccess: () => {
+              handleSuccess();
+            },
+            onError: (error) => {
+              handleError(error)
+            }
+          }
+          );
+    }
+
   return (
     <>
         <div className="topBanner">
@@ -193,7 +284,7 @@ const Rentals = () => {
                       <div className="rentalDesc">
                         {e.attributes.dosDescription}
                       </div>
-                      <div className="bottomButton">
+                      <div className="bookRentalButton">
                         <Button 
                         onClick={() => {
                           if (account) {
@@ -214,6 +305,34 @@ const Rentals = () => {
                         <div className="price">
                           <Icon fill="#808080" size={10} svg="matic" />{" "}
                           {e.attributes.pricePerDay} / Day
+                        </div>
+                      </div>
+
+                      <div className="addPropertyButton">
+                        <Button 
+                        onClick={() => {
+                            if (account) {
+                              addProperty(
+                                "Adarsh Retreat", 
+                                "Bangalore", 
+                                "12.918579101082631", 
+                                "77.6648929870944", 
+                                "Spacious, Clean Apartment", 
+                                "Close to IT Corridor", 
+                                "https://ipfs.moralis.io:2053/ipfs/QmS3gdXVcjM72JSGH82ZEvu4D7nS6sYhbi5YyCw8u8z4pE/media/0", 
+                                4, 
+                                2
+                              )
+                            } 
+                            else {
+                              handleNoAccount();
+                            } 
+                          }
+                        }
+                        
+                        text="Add Property" />
+                        <div className="text">
+                          [Owners Only]
                         </div>
                       </div>
                     </div>
