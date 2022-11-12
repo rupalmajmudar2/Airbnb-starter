@@ -12,3 +12,10 @@ Web3 UI Kit:
 https://github.com/web3ui/web3uikit
 https://web3ui.github.io/web3uikit/
 https://moralis.io/web3ui-kit-the-ultimate-web3-user-interface-kit/
+
+
+IpfsUploader:
+https://moralis.io/how-to-upload-files-to-ipfs-full-guide/
+New: https://docs.moralis.io/docs/how-to-upload-a-folder-to-ipfs
+
+node IpfsImageUploader.js
