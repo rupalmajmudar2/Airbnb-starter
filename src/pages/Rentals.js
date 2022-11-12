@@ -313,13 +313,13 @@ const Rentals = () => {
                         onClick={() => {
                             if (account) {
                               addProperty(
-                                "Adarsh Retreat", 
+                                "RMs New Property Id#" + (Math.floor((Math.random() * 100) + 1)), 
                                 "Bangalore", 
                                 "12.918579101082631", 
                                 "77.6648929870944", 
-                                "Spacious, Clean Apartment", 
+                                "Spacious, Clean Apartment #" + (Math.floor((Math.random() * 100) + 1)), 
                                 "Close to IT Corridor", 
-                                "https://ipfs.moralis.io:2053/ipfs/QmS3gdXVcjM72JSGH82ZEvu4D7nS6sYhbi5YyCw8u8z4pE/media/0", 
+                                "https://ipfs.moralis.io:2053/ipfs/QmecVFyZiDxko9SyEXL2J1qFnrb2AowbZP1NQRFyGUgxwh/rm2.png", 
                                 4, 
                                 2
                               )

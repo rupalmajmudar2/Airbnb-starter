@@ -2042,39 +2042,39 @@
   "resolved" "https://registry.npmjs.org/@metamask/safe-event-emitter/-/safe-event-emitter-2.0.0.tgz"
   "version" "2.0.0"
 
-"@moralisweb3/api-utils@^2.7.1":
-  "integrity" "sha512-rXA5V6B1cStTpb9JDP4N/6e2gWErF+41bRdF9CIiM5zq1vn0tt9US1mA4zWzfrhJZq59hBs4Os7EI6lWUt26yQ=="
-  "resolved" "https://registry.npmjs.org/@moralisweb3/api-utils/-/api-utils-2.7.1.tgz"
-  "version" "2.7.1"
+"@moralisweb3/api-utils@^2.7.2":
+  "integrity" "sha512-oswtUEa6IEs6iQSsCNGwd15WcFXLsNWpxvj78//I4YfdjI6zakQFd2pf8vjBslKqZ3kcF4wfChHAo1I3uj1aAw=="
+  "resolved" "https://registry.npmjs.org/@moralisweb3/api-utils/-/api-utils-2.7.2.tgz"
+  "version" "2.7.2"
   dependencies:
-    "@moralisweb3/core" "^2.7.1"
+    "@moralisweb3/core" "^2.7.2"
 
-"@moralisweb3/core@^2.7.1":
-  "integrity" "sha512-sHh10LEsYK8kkHAyVg0krwOTIKYdGIhFCQBYCStfDGLsnGNUH8fBpv8V1BA5ps3we4uiJOHmCfltjYhRRYd5vw=="
-  "resolved" "https://registry.npmjs.org/@moralisweb3/core/-/core-2.7.1.tgz"
-  "version" "2.7.1"
+"@moralisweb3/core@^2.7.2":
+  "integrity" "sha512-uf+Mx7Rjl07Jm3cnLcPiprtN6fe0cDjx8iIQFiRGqqJABCR5JH1DoSkMwD2NKrB/lCVkX2Hp1VfdeNJX2SJtlA=="
+  "resolved" "https://registry.npmjs.org/@moralisweb3/core/-/core-2.7.2.tgz"
+  "version" "2.7.2"
   dependencies:
     "axios" "^0.27.2"
     "eventemitter3" "^4.0.7"
     "typed-emitter" "^2.1.0"
 
-"@moralisweb3/evm-api@^2.7.1":
-  "integrity" "sha512-WfvhPe80CkU7VWeKqERSDPDQAtaidv1mKY5VyOUU+LKw4SMEnxHDBlyDNuosDDDCVxm56U9oJLysTsG4LLjohA=="
-  "resolved" "https://registry.npmjs.org/@moralisweb3/evm-api/-/evm-api-2.7.1.tgz"
-  "version" "2.7.1"
+"@moralisweb3/evm-api@^2.7.2":
+  "integrity" "sha512-EZ2lxPJKyxTH94e9mwTdNe+y/SVtLJYZb9bNGk1Ay16aSiPzLiDSR1oGJQv8mg92QIX4Uh+3xOhZ0MDCOaO+Ug=="
+  "resolved" "https://registry.npmjs.org/@moralisweb3/evm-api/-/evm-api-2.7.2.tgz"
+  "version" "2.7.2"
   dependencies:
-    "@moralisweb3/api-utils" "^2.7.1"
-    "@moralisweb3/core" "^2.7.1"
-    "@moralisweb3/evm-utils" "^2.7.1"
+    "@moralisweb3/api-utils" "^2.7.2"
+    "@moralisweb3/core" "^2.7.2"
+    "@moralisweb3/evm-utils" "^2.7.2"
 
-"@moralisweb3/evm-utils@^2.7.1":
-  "integrity" "sha512-Nwr/0cmcZPIaZ0brtqtAJ6FstzuNppsie0ZOkKhunYLM7hfgl/Eco4K6jx05WrM5CZwVLe366GzFrUi2UOxzSg=="
-  "resolved" "https://registry.npmjs.org/@moralisweb3/evm-utils/-/evm-utils-2.7.1.tgz"
-  "version" "2.7.1"
+"@moralisweb3/evm-utils@^2.7.1", "@moralisweb3/evm-utils@^2.7.2":
+  "integrity" "sha512-c/Zf7TbCm9hfYW4OreXXzJJ45OpLaPwQiVpwu7sa8Gjp+fkcLbhSbgpZhSHmiasjfWPybAN7jVM3DXKqDcLjjg=="
+  "resolved" "https://registry.npmjs.org/@moralisweb3/evm-utils/-/evm-utils-2.7.2.tgz"
+  "version" "2.7.2"
   dependencies:
     "@ethersproject/address" "^5.6.0"
     "@ethersproject/transactions" "^5.6.0"
-    "@moralisweb3/core" "^2.7.1"
+    "@moralisweb3/core" "^2.7.2"
 
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="

@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@moralisweb3/core": "^2.7.1",
-    "@moralisweb3/evm-api": "^2.7.1",
+    "@moralisweb3/core": "^2.7.2",
+    "@moralisweb3/evm-api": "^2.7.2",
     "@moralisweb3/evm-utils": "^2.7.1",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
