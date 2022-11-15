@@ -1,5 +1,4 @@
 const Moralis = require("moralis/node");
-const M2 = require('moralis');
 const { EvmChain } = require('@moralisweb3/evm-utils');
 const fs = require("fs"); 
 
